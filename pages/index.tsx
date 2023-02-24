@@ -4,11 +4,11 @@ import { Suspense, useRef, useState } from "react";
 import * as THREE from "three";
 import Fireflies from "../components/Fireflies";
 import "../materials/layerMaterial";
-import bearUrl from "../resources/aaaaa.png";
+import bearUrl from "../resources/a.png";
 import bgUrl from "../resources/bg.jpg";
 import groundUrl from "../resources/ground.png";
-import leaves1Url from "../resources/aaaa.png";
-import leaves2Url from "../resources/leaves2.png";
+import leaves1Url from "../resources/l.png";
+import leaves2Url from "../resources/ll.png";
 import starsUrl from "../resources/stars.png";
 
 function Scene({ dof }: any) {

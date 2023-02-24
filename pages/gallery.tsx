@@ -2,14 +2,14 @@ import { animated, to as interpolate, useSprings } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 import { useState } from "react";
 import styled from "styled-components";
+import bearUrl from "../resources/a.png";
 
 const cards = [
-  "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+  "https://res.cloudinary.com/dxuntw2ej/image/upload/v1677244604/backs/KakaoTalk_Photo_2023-02-24-21-18-22_002_a8orwv.jpg",
+  "https://res.cloudinary.com/dxuntw2ej/image/upload/v1677244604/backs/KakaoTalk_Photo_2023-02-24-21-18-22_003_rprmzi.jpg",
+  "https://res.cloudinary.com/dxuntw2ej/image/upload/v1677244602/backs/KakaoTalk_Photo_2023-02-24-21-18-25_005_jdgbbt.jpg",
+  "https://res.cloudinary.com/dxuntw2ej/image/upload/v1677244597/backs/KakaoTalk_Photo_2023-02-24-21-18-21_001_xt0h28.jpg",
+  "https://res.cloudinary.com/dxuntw2ej/image/upload/v1677244605/backs/KakaoTalk_Photo_2023-02-24-21-18-24_004_etjta3.jpg",
 ];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
