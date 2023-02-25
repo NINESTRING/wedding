@@ -8,7 +8,7 @@ export default function Gallery() {
   return (
     <Container>
       <Deck />
-      <LinkContainer href="/">&#127968;</LinkContainer>
+      <LinkContainer href="/">&#x25C0;</LinkContainer>
     </Container>
   );
 }
@@ -31,8 +31,8 @@ const Container = styled.div`
 const LinkContainer = styled(Link)`
   position: absolute;
   top: 0;
-  right: 0;
-  color: white;
+  left: 0;
+  color: black;
   font-size: 30px;
   margin: 1rem;
   /* pointer-events: none; */

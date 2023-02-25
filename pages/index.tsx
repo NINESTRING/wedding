@@ -12,6 +12,7 @@ import leaves2Url from "../resources/ll.png";
 import starsUrl from "../resources/stars.png";
 import styled from "styled-components";
 import Link from "next/link";
+import Head from "next/head";
 
 function Scene({ dof }: any) {
   const scaleN = useAspect(1600, 1000, 1);
@@ -120,6 +121,10 @@ export default function Home() {
 
   return (
     <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
+      <Head>
+        <title>wedding</title>
+        <meta property="og:image" content="/og.png" />
+      </Head>
       <Canvas
         orthographic
         camera={{ zoom: 5, position: [0, 0, 200], far: 300, near: 0 }}
@@ -129,7 +134,7 @@ export default function Home() {
         </Suspense>
         <Effects ref={dof} />
       </Canvas>
-      <LinkContainer href="/gallery">&#128248;</LinkContainer>
+      <LinkContainer href="/gallery">&#x25B6;</LinkContainer>
     </div>
   );
 }
