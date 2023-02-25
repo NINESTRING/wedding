@@ -123,7 +123,7 @@ export default function Home() {
     <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
       <Head>
         <title>박창현 💛 이사예</title>
-        <meta property="og:image" content="/og.png" />
+        <meta property="og:image" content="/o.png" />
       </Head>
       <Canvas
         orthographic
