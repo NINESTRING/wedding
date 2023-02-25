@@ -122,7 +122,7 @@ export default function Home() {
   return (
     <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
       <Head>
-        <title>wedding</title>
+        <title>박창현 💛 이사예</title>
         <meta property="og:image" content="/og.png" />
       </Head>
       <Canvas
