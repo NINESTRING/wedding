@@ -10,17 +10,19 @@ import groundUrl from "../resources/ground.png";
 import leaves1Url from "../resources/l.png";
 import leaves2Url from "../resources/ll.png";
 import starsUrl from "../resources/stars.png";
+import styled from "styled-components";
+import Link from "next/link";
 
 function Scene({ dof }: any) {
-  const scaleN = useAspect(1600, 1000, 1.05);
-  const scaleW = useAspect(2200, 1000, 1.05);
+  const scaleN = useAspect(1600, 1000, 1);
+  const scaleW = useAspect(1600, 1000, 1);
   const textures = useTexture([
     bgUrl.src,
     starsUrl.src,
     groundUrl.src,
+    leaves2Url.src,
     bearUrl.src,
     leaves1Url.src,
-    leaves2Url.src,
   ]);
   const subject = useRef<any>();
   const group = useRef<any>(null);
@@ -35,22 +37,23 @@ function Scene({ dof }: any) {
     {
       texture: textures[3],
       z: 30,
-      ref: subject,
-      scaleFactor: 0.83,
-      scale: scaleN,
+      wiggle: 0.6,
+      // scaleFactor: 0.7,
+      scale: scaleW,
     },
     {
       texture: textures[4],
       factor: 0.03,
       scaleFactor: 1,
+      ref: subject,
       z: 40,
-      wiggle: 0.6,
-      scale: scaleW,
+      // wiggle: 0.5,
+      scale: scaleN,
     },
     {
       texture: textures[5],
-      factor: 0.04,
-      scaleFactor: 1.3,
+      // factor: 0.04,
+      // scaleFactor: 1.3,
       z: 49,
       wiggle: 1,
       scale: scaleW,
@@ -116,7 +119,7 @@ export default function Home() {
   const dof = useRef<any>(null);
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
       <Canvas
         orthographic
         camera={{ zoom: 5, position: [0, 0, 200], far: 300, near: 0 }}
@@ -126,6 +129,17 @@ export default function Home() {
         </Suspense>
         <Effects ref={dof} />
       </Canvas>
+      <LinkContainer href="/gallery">&#128248;</LinkContainer>
     </div>
   );
 }
+
+const LinkContainer = styled.a`
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 30px;
+  margin: 1rem;
+  /* pointer-events: none; */
+`;
